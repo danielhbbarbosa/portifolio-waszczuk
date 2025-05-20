@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+}
+
+section.container {
+    display: block;
+    margin: 100px auto;
+}
+
+div.flex {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.flex h1 {
+    font-family: "Tangerine", cursive;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+div.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+div.links a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #414141;
+}
+
+div.links a:hover {
+    opacity: .5;
+}
+
+div.assets{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+div.assets img{
+    width: 321px;
+    margin: 10px;
+}
+
+.top {
+    position: relative;
+    top: -45%;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+footer > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+
+div.redes img {
+    width: 24px;    
+}
