@@ -11,22 +11,16 @@ body {
     font-family: "Oswald", sans-serif;
 }
 
-section.container {
-    display: block;
-    margin: 100px auto;
-}
-
-div.flex {
-    display:grid;
+header {
+    display: grid;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin-top: 100px;
 }
 
-div.flex h1 {
+header h1 {
     font-family: "Tangerine", cursive;
-    font-size: 3em;
-    font-weight: 400;
+    font-size: 3.3em;
+    font-weight: 500;
 }
 
 div.links {
@@ -44,6 +38,19 @@ div.links a {
 
 div.links a:hover {
     opacity: .5;
+    transition: .3s;
+}
+
+section.container {
+    display: block;
+    margin: 50px auto;
+}
+
+div.flex {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 div.assets{
@@ -56,12 +63,21 @@ div.assets img{
     margin: 10px;
 }
 
+div.assets img:hover {
+    opacity: .5;
+    transition: 1s;
+}
+
 .top {
     position: relative;
     top: -45%;
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-top: 100px;
 }
 
@@ -72,6 +88,15 @@ footer > p {
 }
 
 
-div.redes img {
-    width: 24px;    
+div.redes a img {
+    width: 24px;
+}
+
+div.redes a {
+    text-decoration: none;
+}
+
+div.redes a img:hover {
+    opacity: .5;
+    transition: .7s;
 }
