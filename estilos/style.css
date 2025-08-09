@@ -40,6 +40,15 @@ div.links a:hover {
     transition: .3s;
 }
 
+main {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+main.fade-out {
+    opacity: 0;
+}
+
 main.container {
     display: block;
     margin: 50px auto;

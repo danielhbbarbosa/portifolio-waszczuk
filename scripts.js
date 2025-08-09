@@ -1,44 +1,63 @@
-const homeLink = document.querySelector('.home-link')
-const aboutLink = document.querySelector('.about-link')
-const contactsLink = document.querySelector('.contacts-link')
-const main = document.querySelector('main')
+const main = document.querySelector('main');
 
+// Função para trocar de página com transição
+function changePage(className, content) {
+    // Inicia a saída (fade-out)
+    main.classList.add('fade-out');
+
+    // Espera o fade-out terminar para trocar o conteúdo
+    setTimeout(() => {
+        main.className = className; // troca a classe principal (container, sobre, etc.)
+        main.innerHTML = content;   // troca o HTML
+        main.classList.remove('fade-out'); // inicia o fade-in
+    }, 300); // mesmo tempo do transition no CSS
+}
+
+// Páginas
 function home() {
-    main.innerHTML = `
+    changePage("container", `
         <div class="flex">
-        
             <div class="assets">
-                <img src="./assets/1.avif" alt="Imagem ilustrativa">
-                <img src="./assets/2.avif" alt="Imagem ilustrativa">
-                <img src="./assets/3.avif" alt="Imagem ilustrativa">
-                <img src="./assets/4.avif" alt="Imagem ilustrativa" class="top">
-                <img src="./assets/5.avif" alt="Imagem ilustrativa">
-                <img src="./assets/6.avif" alt="Imagem ilustrativa" class="top">
-                <img src="./assets/7.avif" alt="Imagem ilustrativa" class="top">
-                <img src="./assets/8.avif" alt="Imagem ilustrativa">
-                <img src="./assets/9.avif" alt="Imagem ilustrativa" class="top">
+                <img src="./assets/1.png" alt="Imagem ilustrativa">
+                <img src="./assets/2.png" alt="Imagem ilustrativa">
+                <img src="./assets/3.png" alt="Imagem ilustrativa">
+                <img src="./assets/4.png" alt="Imagem ilustrativa" class="top">
+                <img src="./assets/5.png" alt="Imagem ilustrativa">
+                <img src="./assets/6.png" alt="Imagem ilustrativa" class="top">
+                <img src="./assets/7.png" alt="Imagem ilustrativa" class="top">
+                <img src="./assets/8.png" alt="Imagem ilustrativa">
+                <img src="./assets/9.png" alt="Imagem ilustrativa" class="top">
             </div>
-
         </div>
-    `
+    `);
 }
 
 function about() {
-    main.innerHTML = `
+    changePage("sobre", `
         <img src="./assets/sobre.png" alt="Imagem ilustrativa">
-
         <div class="sobre-text">
-
             <h2 class="title-sobre">Sobre mim</h2>
-            
-            <p class="paragraph-sobre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dicta quos sequi commodi sit ratione optio neque unde voluptatibus quia? Possimus libero adipisci ipsum officiis itaque voluptatum sit ratione animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cupiditate id placeat neque iste quis adipisci ratione expedita.</p>
-            
+            <p class="paragraph-sobre">
+                Oie me chamo Luana Waszczuk, atualmente tenho 18 anos, sou Designer a um tempinho já ... amo o que faço , e pretendo seguir carreira e em muito breve abrir minha loja online como Designer.
+            </p>
         </div>
-    `
+    `);
 }
 
 function contacts() {
-    main.innerHTML = `
-
-    `
+    changePage("container", `
+        <h2 style="text-align:center;">Contato</h2>
+        <p style="text-align:center; margin-top:20px;">
+            Me envie um e-mail: 
+            <a href="mailto:luanawasckuque15@gmail.com">luanawasckuque15@gmail.com</a>
+        </p>
+    `);
 }
+
+// Eventos
+document.querySelector('.home-link').addEventListener('click', home);
+document.querySelector('.about-link').addEventListener('click', about);
+document.querySelector('.contacts-link').addEventListener('click', contacts);
+
+// Página inicial
+home();
