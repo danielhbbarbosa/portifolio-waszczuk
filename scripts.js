@@ -1,4 +1,7 @@
 const main = document.querySelector('main');
+const footer = document.querySelector('footer')
+
+console.log(footer)
 
 // Função para trocar de página com transição
 function changePage(className, content) {
@@ -21,15 +24,18 @@ function home() {
                 <img src="./assets/1.png" alt="Imagem ilustrativa">
                 <img src="./assets/2.png" alt="Imagem ilustrativa">
                 <img src="./assets/3.png" alt="Imagem ilustrativa">
-                <img src="./assets/4.png" alt="Imagem ilustrativa" class="top">
+                <img src="./assets/4.png" alt="Imagem ilustrativa" class="around">
                 <img src="./assets/5.png" alt="Imagem ilustrativa">
-                <img src="./assets/6.png" alt="Imagem ilustrativa" class="top">
-                <img src="./assets/7.png" alt="Imagem ilustrativa" class="top">
+                <img src="./assets/6.png" alt="Imagem ilustrativa" class="around">
+                <img src="./assets/7.png" alt="Imagem ilustrativa" class="around">
                 <img src="./assets/8.png" alt="Imagem ilustrativa">
-                <img src="./assets/9.png" alt="Imagem ilustrativa" class="top">
+                <img src="./assets/9.png" alt="Imagem ilustrativa" class="around">
             </div>
         </div>
     `);
+
+    footer.classList.add('padrao')
+    footer.classList.remove('none')
 }
 
 function about() {
@@ -42,16 +48,36 @@ function about() {
             </p>
         </div>
     `);
+
+    footer.classList.add('padrao')
+    footer.classList.remove('none')
 }
 
 function contacts() {
     changePage("container", `
-        <h2 style="text-align:center;">Contato</h2>
-        <p style="text-align:center; margin-top:20px;">
-            Me envie um e-mail: 
-            <a href="mailto:luanawasckuque15@gmail.com">luanawasckuque15@gmail.com</a>
-        </p>
+        
+        <section class="contacts">
+            <div class="contact">
+                <img src="./assets/gmail.png">
+                <h3>E-mail</h3>
+            </div>
+
+            <div class="contact">
+                <img src="./assets/linkedin.png">
+                <h3>Linkedin</h3>
+            </div>
+
+            <div class="contact">
+                <img src="./assets/behance.png">
+                <h3>Behance</h3>
+            </div>
+        </section>
+        
+        
     `);
+
+    footer.classList.add('none')
+    footer.classList.remove('padrao')
 }
 
 // Eventos
@@ -60,4 +86,4 @@ document.querySelector('.about-link').addEventListener('click', about);
 document.querySelector('.contacts-link').addEventListener('click', contacts);
 
 // Página inicial
-home();
+contacts();

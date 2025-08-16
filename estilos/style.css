@@ -8,6 +8,8 @@
 
 body {
     font-family: "Arial", sans-serif;
+    background: url("../assets/background.jpg") no-repeat fixed;
+    background-size: cover;
 }
 
 header {
@@ -63,30 +65,36 @@ div.flex {
 
 div.assets{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 321px);
+    gap: 10px;
+}
+div.assets img{
+    width: 100%;
+    object-fit: cover;
 }
 
-div.assets img{
-    width: 321px;
-    margin: 10px;
-}
 
 div.assets img:hover {
     opacity: .5;
     transition: 1s;
 }
 
-.top {
+.around {
     position: relative;
     top: -45%;
+
 }
 
-footer {
+footer.padrao {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 100px 0 50px 0;
+}
+
+footer.none {
+    display: none;
 }
 
 footer > p {
@@ -98,6 +106,7 @@ footer > p {
 
 div.redes a img {
     width: 24px;
+    transition: opacity .3s ease-in-out;
 }
 
 div.redes a {
@@ -106,7 +115,6 @@ div.redes a {
 
 div.redes a img:hover {
     opacity: .5;
-    transition: .7s;
 }
 
 /* sobre */
@@ -139,3 +147,38 @@ div.sobre-text h2.title-sobre {
 div.sobre-text p.paragraph-sobre {
     font-weight: 200;
 }
+
+section.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+div.contact {
+    padding: 1vh 1vw 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(87, 87, 87);
+    border-radius: 17px;
+    width: 20vw;
+}
+
+div.contact img {
+    margin-right: 2vw;
+}
+
+div.contact h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1030px){
+    body {
+        padding-left: 10px;
+    }
+}
+
+
