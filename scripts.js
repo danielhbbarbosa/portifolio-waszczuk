@@ -23,13 +23,13 @@ function home() {
             <div class="assets">
                 <img src="./assets/1.png" alt="Imagem ilustrativa">
                 <img src="./assets/2.png" alt="Imagem ilustrativa">
-                <img src="./assets/3.png" alt="Imagem ilustrativa">
+                <img src="./assets/3.png" alt="Imagem ilustrativa" class="around-resp">
                 <img src="./assets/4.png" alt="Imagem ilustrativa" class="around">
-                <img src="./assets/5.png" alt="Imagem ilustrativa">
+                <img src="./assets/5.png" alt="Imagem ilustrativa" class="around-resp">
                 <img src="./assets/6.png" alt="Imagem ilustrativa" class="around">
-                <img src="./assets/7.png" alt="Imagem ilustrativa" class="around">
+                <img src="./assets/7.png" alt="Imagem ilustrativa" class="around around-resp">
                 <img src="./assets/8.png" alt="Imagem ilustrativa">
-                <img src="./assets/9.png" alt="Imagem ilustrativa" class="around">
+                <img src="./assets/9.png" alt="Imagem ilustrativa" class="around around-resp">
             </div>
         </div>
     `);
@@ -44,7 +44,7 @@ function about() {
         <div class="sobre-text">
             <h2 class="title-sobre">Sobre mim</h2>
             <p class="paragraph-sobre">
-                Oie me chamo Luana Waszczuk, atualmente tenho 18 anos, sou Designer a um tempinho já ... amo o que faço , e pretendo seguir carreira e em muito breve abrir minha loja online como Designer.
+                Oie! Me chamo Luana Waszczuk, atualmente tenho 18 anos, sou Designer a um tempinho já... Amo o que faço, e pretendo seguir carreira. E em breve, abrir minha loja online como Designer.
             </p>
         </div>
     `);
@@ -54,23 +54,29 @@ function about() {
 }
 
 function contacts() {
-    changePage("container", `
+    changePage("contacts", `
         
         <section class="contacts">
-            <div class="contact">
-                <img src="./assets/gmail.png">
-                <h3>E-mail</h3>
-            </div>
+            <a href="mailto:luanawasckuque15@gmail.com" target="_blank">
+                <div class="contact">
+                    <img src="./assets/gmail.png">
+                    <h3>E-mail</h3>
+                </div>
+            </a>
 
-            <div class="contact">
-                <img src="./assets/linkedin.png">
-                <h3>Linkedin</h3>
-            </div>
+            <a href="https://www.linkedin.com/in/luanawaszczuk/" target="_blank">
+                <div class="contact">
+                    <img src="./assets/linkedin.png">
+                    <h3>Linkedin</h3>
+                </div>
+            </a>
 
-            <div class="contact">
-                <img src="./assets/behance.png">
-                <h3>Behance</h3>
-            </div>
+            <a href="https://www.behance.net/luanawaszczuk" target="_blank">
+                <div class="contact">
+                    <img src="./assets/behance.png">
+                    <h3>Behance</h3>
+                </div>
+            </a>
         </section>
         
         
@@ -86,4 +92,4 @@ document.querySelector('.about-link').addEventListener('click', about);
 document.querySelector('.contacts-link').addEventListener('click', contacts);
 
 // Página inicial
-contacts();
+home();
